@@ -1,8 +1,6 @@
 # Medical-NER
 There are two methods for solving this task: a Recurrent Neural Network (RNN) model and a Word-Vector (WV) model. You'll find them in separate directories, [RNN is here](https://github.com/withtwist/medical-ner/tree/master/rnn-ner) and [WV is here](https://github.com/withtwist/medical-ner/tree/master/wv-ner). They have their own _readmes_ on how to get you started.
 
-## Background
-There are very good readings on both approaches. [This post by colah](http://colah.github.io/posts/2015-08-Understanding-LSTMs/) gives a very good image of how a Recurrent Neural Network works and [the original paper by Zhang and Elhadad](http://www.ncbi.nlm.nih.gov/pubmed/23954592) that the Word-Vector model is based on describes the method in a good way. We have however provided a short summarization of the methods down below.
 
 ### Recurrent Neural Network Model
 The method tries to solve the task by using inherent knowledge already in taxonomies to solve the problem. Using knowledge from external sources, it will be able to train the model to recognize named entities from different categories. The Recurrent Neural Network model will be trained to read through text and will predict the category that the different words or phrase in the text-stream falls into with the output. While it is a supervised method, the training data will be generated with the information from the taxonomies which will make it a semi-supervised approach. This model uses Google's [TensorFlow](https://www.tensorflow.org) to implement the neural network. A basic bidirectional Recurrent Neural Network (RNN) implementation was provided by [Olof Mogren](http://mogren.one).
